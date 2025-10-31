@@ -1,46 +1,48 @@
-{
-  "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
-  "name": "EDITO PH1 Holo-Mero Plankton Dataset (SCHPM1)",
-  "description": "Plankton lifeform dataset generated from EDITO data source under PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
-  "metadata": {
-    "location": "C:/Users/willem.boone/Documents/projects/dto-bioflow/data/Pelagic_habitat_data/data_sets",
-    "datasource": "EDITO",
-    "application": "PH1",
-    "type": "lifeforms holo-mero plankton",
-    "region": "SCHPM1"
+[
+  {
+    "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
+    "name": "EDITO PH1 Holo-Mero Plankton Dataset (SCHPM1)",
+    "description": "Plankton lifeform dataset generated from EDITO data source under PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
+    "metadata": {
+      "location": "C:/Users/willem.boone/Documents/projects/dto-bioflow/data/Pelagic_habitat_data/data_sets",
+      "datasource": "EDITO",
+      "application": "PH1",
+      "type": "lifeforms holo-mero plankton",
+      "region": "SCHPM1"
+    },
+    "sources": {
+      "data": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv",
+      "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SCHPM1_holo_mero.R",
+      "reference": "https://github.com/willem0boone/Pelagic_habitat_data/"
+    },
+    "provenance": {
+      "created_by": "Willem Boone",
+      "created_on": "2025-10-31",
+      "generated_with": "R (get_edito_dasid_4687_SCHPM1_holo_mero.R)",
+      "notes": "Dataset generated as part of DTO Bioflow Pelagic Habitat project."
+    }
   },
-  "sources": {
-    "data": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv",
-    "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SCHPM1_holo_mero.R",
-    "reference": "https://github.com/willem0boone/Pelagic_habitat_data/"
-  },
-  "provenance": {
-    "created_by": "Willem Boone",
-    "created_on": "2025-10-31",
-    "generated_with": "R (get_edito_dasid_4687_SCHPM1_holo_mero.R)",
-    "notes": "Dataset generated as part of DTO Bioflow Pelagic Habitat project."
+  {
+    "id": "EDITO_dasid_4687_SNS_holo_mero",
+    "name": "EDITO PH1 Holo-Mero Plankton Dataset (SNS)",
+    "description": "Plankton lifeform dataset generated from EDITO data source under PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
+    "metadata": {
+      "location": "C:/Users/willem.boone/Documents/projects/dto-bioflow/data/Pelagic_habitat_data/data_sets",
+      "datasource": "EDITO",
+      "application": "PH1",
+      "type": "lifeforms holo-mero plankton",
+      "region": "SNS"
+    },
+    "sources": {
+      "data": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_sets/EDITO_dasid_4687_SNS_holo_mero.csv",
+      "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SNS_holo_mero.R",
+      "reference": "https://github.com/willem0boone/Pelagic_habitat_data/"
+    },
+    "provenance": {
+      "created_by": "Willem Boone",
+      "created_on": "2025-10-31",
+      "generated_with": "R (get_edito_dasid_4687_SNS_holo_mero.R)",
+      "notes": "Dataset generated as part of DTO Bioflow Pelagic Habitat project."
+    }
   }
-}
-{
-  "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
-  "name": "EDITO PH1 Holo-Mero Plankton Dataset (SCHPM1)",
-  "description": "Plankton lifeform dataset generated from EDITO data source under PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
-  "metadata": {
-    "location": "C:/Users/willem.boone/Documents/projects/dto-bioflow/data/Pelagic_habitat_data/data_sets",
-    "datasource": "EDITO",
-    "application": "PH1",
-    "type": "lifeforms holo-mero plankton",
-    "region": "SNS"
-  },
-  "sources": {
-    "data": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_sets/EDITO_dasid_4687_SNS_holo_mero.csv",
-    "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SNS_holo_mero.R",
-    "reference": "https://github.com/willem0boone/Pelagic_habitat_data/"
-  },
-  "provenance": {
-    "created_by": "Willem Boone",
-    "created_on": "2025-10-31",
-    "generated_with": "R (get_edito_dasid_4687_SCHPM1_holo_mero.R)",
-    "notes": "Dataset generated as part of DTO Bioflow Pelagic Habitat project."
-  }
-}
+]
