@@ -1,0 +1,74 @@
+holoplankton:
+  - Calanoida
+  - Chaetognatha
+  - Appendicularia
+  - LW01_Appendicularia
+  - LW04_Chaetognatha
+  - Harpacticoida
+  - Branchiopoda
+  - LW19_Cnidaria
+  - LW06_Calanoida
+  - Cnidaria
+  - LW18_Ctenophora
+  - LW24_Branchiopoda
+  - Ctenophora
+  - LW07_Harpacticoida
+  - Anomura
+  - LW10_Anomura
+
+ambi:
+  - Mysida
+  - LW20_Mollusca_gastropoda
+  - LW03_Pisces_larvae
+  - LW15_Mysidae
+  - Amphipoda
+  - LW09_Amphipoda
+  - Pisces_egg
+  - Mollusca
+  - LW02_Pisces_egg
+  - Mysidae
+  - Pisces_larvae
+  - LW26_Amphipoda
+  - Foraminifora
+  - Cumacea
+  - Isopoda
+  - LW05_Cumacea
+  - LW25_Mysidae
+
+meroplankton:
+  - LW21_Annelida
+  - Brachyura_zoea
+  - Brachyura_mega
+  - LW23_Echinodermata_type2
+  - Echinodermata
+  - Cirripeda_naup
+  - LW13_Brachyura_zoe
+  - LW17_Cirripeda_nauplius
+  - Cirripeda_cyp
+  - LW16_Cirripeda_cypris
+  - LW23_Echinodermata
+  - LW23_Echinodermata_type3
+  - LW20_Mollusca_bivalvia
+  - LW14_Caridae_zoe
+  - Caridae_zoea
+
+discard:
+  - artefact
+  - fibres
+  - LW00_Bubbles
+  - LW00_Sand
+  - detritus
+  - LW00_Fibres
+  - LW26_Bellerochea
+  - Bellerochea
+  - LW00_Detritus
+  - LW00_Artefacts
+  - LW25_Divers
+  - LW22_Noctiluca
+  - Noctiluca
+  - Unknown
+
+dont_know:
+  - Polychaetophyes
+  - Brachiopoda
+  - Annelida
