@@ -1,24 +1,26 @@
 [
   {
     "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
-    "name": "EDITO PH1 Holo-Mero Plankton Dataset (SCHPM1)",
-    "description": "Plankton lifeform dataset generated from EDITO data source for PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
+    "name": "ZooScan Holo-Mero Plankton (SCHPM1)",
+    "description": "Plankton lifeforms from dataset https://www.vliz.be/en/imis?module=dataset&dasid=4687. The data was accessed via the emodnet_biology parquet on EDITO. Includes holo- and mero-plankton lifeforms and is used for PH1 indicator calculations.",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SCHPM1",
     "sources": {
       "data": "https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv",
       "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SCHPM1_holo_mero.R"
+      "based_on": "https://www.vliz.be/en/imis?module=dataset&dasid=4687
     }
   },
   {
-    "id": "EDITO_dasid_4687_SNS_holo_mero",
-    "name": "EDITO PH1 Holo-Mero Plankton Dataset (SNS)",
-    "description": "Plankton lifeform dataset generated from EDITO data source for PH1 application. Includes holo- and mero-plankton lifeforms extracted and processed from the EDITO data lake.",
+    "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
+    "name": "ZooScan Holo-Mero Plankton (SNS)",
+    "description": "Plankton lifeforms from dataset https://www.vliz.be/en/imis?module=dataset&dasid=4687. The data was accessed via the emodnet_biology parquet on EDITO. Includes holo- and mero-plankton lifeforms and is used for PH1 indicator calculations.",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SNS",
     "sources": {
-      "data": "https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SNS_holo_mero.csv",
+      "data": "https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv",
       "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.dataflow_EDITO/get_edito_dasid_4687_SNS_holo_mero.R"
+      "based_on": "https://www.vliz.be/en/imis?module=dataset&dasid=4687"
     }
-  }
+  },
 ]
