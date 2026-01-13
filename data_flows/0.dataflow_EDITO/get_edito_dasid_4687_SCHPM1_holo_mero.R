@@ -126,7 +126,7 @@ filtered_data <- filter_and_plot_region_selection(
 # ------------------------------------------------------------------------------
 # format column names according to PLET requirements
 # ------------------------------------------------------------------------------
-my_subset = subset(my_selection, select=c(parameter,
+my_subset = subset(filtered_data, select=c(parameter,
                                           parameter_value,
                                           datasetid,
                                           observationdate,
