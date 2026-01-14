@@ -2,7 +2,7 @@
   {
     "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
     "name": "ZooScan Holo-Mero Plankton (SCHPM1)",
-    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from <a href="https://www.vliz.be/en/imis?module=dataset&dasid=4687">https://www.vliz.be/en/imis?module=dataset&dasid=4687</a>. The data was accessed via the emodnet biology parquet on EDITO.",
+    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from <a href=\"https://www.vliz.be/en/imis?module=dataset&dasid=4687\">https://www.vliz.be/en/imis?module=dataset&dasid=4687</a>. The data was accessed via the emodnet biology parquet on EDITO.",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SCHPM1",
     "sources": {
@@ -12,9 +12,9 @@
     }
   },
   {
-    "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
+    "id": "EDITO_dasid_4687_SNS_holo_mero",
     "name": "ZooScan Holo-Mero Plankton (SNS)",
-    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from <a href="https://www.vliz.be/en/imis?module=dataset&dasid=4687">https://www.vliz.be/en/imis?module=dataset&dasid=4687</a>. The data was accessed via the emodnet biology parquet on EDITO.",
+    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from <a href=\"https://www.vliz.be/en/imis?module=dataset&dasid=4687\">https://www.vliz.be/en/imis?module=dataset&dasid=4687</a>. The data was accessed via the emodnet biology parquet on EDITO.",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SNS",
     "sources": {
