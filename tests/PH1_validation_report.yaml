@@ -1,11 +1,11 @@
 test: PH1 structural validation
-timestamp: 1.7689986e+09
+timestamp: 1.7691587e+09
 results:
 - dataset_id: EDITO_dasid_4687_SCHPM1_holo_mero
   data_store: https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv
-  pass: yes
-  message: Validation passed
+  pass: no
+  message: ~
 - dataset_id: EDITO_dasid_4687_SNS_holo_mero
   data_store: https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SNS_holo_mero.csv
-  pass: yes
-  message: Validation passed
+  pass: no
+  message: ~
