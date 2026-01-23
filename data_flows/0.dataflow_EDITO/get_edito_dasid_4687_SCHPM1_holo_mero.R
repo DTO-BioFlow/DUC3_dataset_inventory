@@ -90,21 +90,24 @@ my_subset <- my_subset %>%
 my_subset <- my_subset %>% filter(lifeform %in% c("holoplankton", "meroplankton"))
 
 # ------------------------------------------------------------------------------
-# aggregate abundances per event
+# aggregate abundances per event and period
 # ------------------------------------------------------------------------------
 my_subset <- my_subset %>%
   group_by(period, lifeform, eventid) %>%
   summarise(abundance = sum(abundance), .groups = "drop") %>%
-  mutate(num_samples = 1) %>%
+  mutate(num_samples = 1)
+
+# aggregate per period & lifeform
+my_subset <- my_subset %>%
   group_by(period, lifeform) %>%
   summarise(
-    abundance = sum(abundance) / sum(num_samples),
+    abundance = sum(abundance) / sum(num_samples), # average per event
     num_samples = sum(num_samples),
     .groups = "drop"
   )
 
 # ------------------------------------------------------------------------------
-# reshape to wide format for new PH1 function
+# reshape to wide format and ensure single row per period
 # ------------------------------------------------------------------------------
 wide_df <- my_subset %>%
   pivot_wider(
@@ -113,12 +116,19 @@ wide_df <- my_subset %>%
     values_fill = list(abundance = 0)
   )
 
-# ensure num_samples per period (take max across columns for consistency)
+# now ensure num_samples is consistent per period and collapse duplicates
 wide_df <- wide_df %>%
   group_by(period) %>%
-  mutate(num_samples = max(num_samples, na.rm = TRUE)) %>%
-  ungroup() %>%
-  select(period, holoplankton, meroplankton, num_samples)
+  summarise(
+    across(where(is.numeric), sum),  # sum numeric columns to collapse any duplicates
+    .groups = "drop"
+  )
+
+# reorder columns: period | <abundance cols> | num_samples
+num_samples_col <- grep("num_samples", names(wide_df))
+abundance_cols <- setdiff(2:ncol(wide_df), num_samples_col)
+wide_df <- wide_df %>%
+  select(period, all_of(abundance_cols), all_of(num_samples_col))
 
 # ------------------------------------------------------------------------------
 # save to CSV
