@@ -2,26 +2,26 @@
   {
     "id": "EDITO_dasid_4687_SCHPM1_holo_mero",
     "name": "LifeWatch observatory data: zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea (SCHPM1)",
-    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea. The data was accessed via the emodnet biology parquet on EDITO on 2026-01-23.",
-    "creation_date": "2026-01-23",
+    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea. The data was accessed via the emodnet biology parquet on EDITO on 2026-02-16.",
+    "creation_date": "2026-02-16",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SCHPM1",
     "sources": {
-      "data_store": "https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SCHPM1_holo_mero.csv",
-      "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.EDITO_dasid_4687/get_edito_dasid_4687_SCHPM1_PH1_holo_mero.R",
+      "data_store": "https://raw.githubusercontent.com/DTO-BioFlow/DUC3_dataset_inventory/refs/heads/main/data_sets/EDITO_dasid_4687_SCHPM1_PH1_holo_mero.csv",
+      "flow": "https://github.com/DTO-BioFlow/DUC3_dataset_inventory/blob/main/data_flows/0.EDITO_dasid_4687/get_edito_dasid_4687_SCHPM1_PH1_holo_mero.R",
       "source_link": "https://www.vliz.be/en/imis?module=dataset&dasid=4687"
     }
   },
   {
     "id": "EDITO_dasid_4687_SNS_holo_mero",
     "name": "LifeWatch observatory data: zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea (SNS)",
-    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea. The data was accessed via the emodnet biology parquet on EDITO on 2026-01-23.",
-    "creation_date": "2026-01-23",
+    "description": "Plankton lifeforms (holo- and mero-plankton) extracted from zooplankton observations by imaging (ZooScan) in the Belgian Part of the North Sea. The data was accessed via the emodnet biology parquet on EDITO on 2026-02-16.",
+    "creation_date": "2026-02-16",
     "lifeforms": ["holoplankton", "meroplankton"],
     "region": "SNS",
     "sources": {
-      "data_store": "https://raw.githubusercontent.com/willem0boone/Pelagic_habitat_data/main/data_sets/EDITO_dasid_4687_SNS_holo_mero.csv",
-      "flow": "https://github.com/willem0boone/Pelagic_habitat_data/blob/main/data_flows/0.EDITO_dasid_4687/get_edito_dasid_4687_SNS_PH1_holo_mero.R",
+      "data_store": "https://raw.githubusercontent.com/DTO-BioFlow/DUC3_dataset_inventory/refs/heads/main/data_sets/EDITO_dasid_4687_SNS_PH1_holo_mero.csv",
+      "flow": "https://github.com/DTO-BioFlow/DUC3_dataset_inventory/blob/main/data_flows/0.EDITO_dasid_4687/get_edito_dasid_4687_SNS_PH1_holo_mero.R",
       "source_link": "https://www.vliz.be/en/imis?module=dataset&dasid=4687"
     }
   }

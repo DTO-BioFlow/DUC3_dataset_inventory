@@ -55,12 +55,10 @@ MY_REGION <- "SNS"
 filtered_data <- filter_and_plot_region_selection(
   ospar_region = MY_REGION, 
   df = my_selection, 
-  filename = paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH1_holo_mero.png")
+  filename = paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH2_copepod_abundance.png")
 )
 
-# ------------------------------------------------------------------------------
-# subset columns and format dates
-# ------------------------------------------------------------------------------
+# subset columns
 my_subset <- filtered_data %>%
   select(parameter, parameter_value, datasetid, observationdate,
          scientificname_accepted, eventtype, eventid) %>%
@@ -72,68 +70,39 @@ my_subset <- filtered_data %>%
   )
 
 # ------------------------------------------------------------------------------
-# classify into lifeforms
+# classify copepods
 # ------------------------------------------------------------------------------
-lifeform_map <- read_yaml("lookup_tables/lifeform_lookup_zooplankton.yaml")
+copepods <- read_yaml("lookup_tables/copepods.yaml") %>% unlist()
+copepod_data <- my_subset %>%
+  filter(scientificname_accepted %in% copepods)
 
-my_subset <- my_subset %>%
-  mutate(lifeform = purrr::map_chr(scientificname_accepted, function(sp) {
-    group <- names(lifeform_map)[sapply(lifeform_map, function(x) sp %in% x)]
-    if (length(group) == 0) return(NA)
-    return(group)
-  })) %>%
-  drop_na(lifeform)
+# -------------------------
+# Sum abundances per eventID
+# -------------------------
+event_sum <- copepod_data %>%
+  group_by(eventid) %>%
+  summarise(daily_abundance = sum(abundance, na.rm = TRUE),
+            observationdate = first(observationdate),  # keep date for month grouping
+            .groups = "drop")
 
-# ------------------------------------------------------------------------------
-# keep only holo & mero
-# ------------------------------------------------------------------------------
-my_subset <- my_subset %>% filter(lifeform %in% c("holoplankton", "meroplankton"))
+# -------------------------
+# Compute monthly average (first day of month)
+# -------------------------
+monthly_avg <- event_sum %>%
+  mutate(month = floor_date(as.Date(observationdate), "month")) %>%
+  group_by(month) %>%
+  summarise(values = mean(daily_abundance, na.rm = TRUE), .groups = "drop") %>%
+  mutate(
+    station = "SNS",        # hard-coded station
+    date = month            # first day of the month
+  ) %>%
+  select(station, date, values)
 
-# ------------------------------------------------------------------------------
-# aggregate abundances per event and period
-# ------------------------------------------------------------------------------
-my_subset <- my_subset %>%
-  group_by(period, lifeform, eventid) %>%
-  summarise(abundance = sum(abundance), .groups = "drop") %>%
-  mutate(num_samples = 1)
-
-# aggregate per period & lifeform
-my_subset <- my_subset %>%
-  group_by(period, lifeform) %>%
-  summarise(
-    abundance = sum(abundance) / sum(num_samples), # average per event
-    num_samples = sum(num_samples),
-    .groups = "drop"
-  )
-
-# ------------------------------------------------------------------------------
-# reshape to wide format and ensure single row per period
-# ------------------------------------------------------------------------------
-wide_df <- my_subset %>%
-  pivot_wider(
-    names_from = lifeform,
-    values_from = abundance,
-    values_fill = list(abundance = 0)
-  )
-
-# now ensure num_samples is consistent per period and collapse duplicates
-wide_df <- wide_df %>%
-  group_by(period) %>%
-  summarise(
-    across(where(is.numeric), sum),  # sum numeric columns to collapse any duplicates
-    .groups = "drop"
-  )
-
-# reorder columns: period | <abundance cols> | num_samples
-num_samples_col <- grep("num_samples", names(wide_df))
-abundance_cols <- setdiff(2:ncol(wide_df), num_samples_col)
-wide_df <- wide_df %>%
-  select(period, all_of(abundance_cols), all_of(num_samples_col))
 
 # ------------------------------------------------------------------------------
 # save to CSV
 # ------------------------------------------------------------------------------
-dest <- paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH1_holo_mero.csv")
+dest <- paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH2_copepod_abundance.csv")
 write.csv(wide_df, dest, row.names = FALSE)
+print("Finished ETL: wide-format CSV ready for PH2 analysis")
 
-print("Finished ETL: wide-format CSV ready for PH1 analysis")
