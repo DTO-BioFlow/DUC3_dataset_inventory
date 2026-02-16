@@ -55,7 +55,7 @@ MY_REGION <- "SCHPM1"
 filtered_data <- filter_and_plot_region_selection(
   ospar_region = MY_REGION, 
   df = my_selection, 
-  filename = paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_holo_mero.png")
+  filename = paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH1_holo_mero.png")
 )
 
 # ------------------------------------------------------------------------------
@@ -133,7 +133,7 @@ wide_df <- wide_df %>%
 # ------------------------------------------------------------------------------
 # save to CSV
 # ------------------------------------------------------------------------------
-dest <- paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_holo_mero.csv")
+dest <- paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH1_holo_mero.csv")
 write.csv(wide_df, dest, row.names = FALSE)
 
 print("Finished ETL: wide-format CSV ready for PH1 analysis")
