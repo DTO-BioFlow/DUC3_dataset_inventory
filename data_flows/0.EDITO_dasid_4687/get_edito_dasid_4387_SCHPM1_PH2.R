@@ -93,7 +93,7 @@ monthly_avg <- event_sum %>%
   group_by(month) %>%
   summarise(values = mean(daily_abundance, na.rm = TRUE), .groups = "drop") %>%
   mutate(
-    station = "SNS",        # hard-coded station
+    station = "SCHPM1",        # hard-coded station
     date = month            # first day of the month
   ) %>%
   select(station, date, values)
@@ -103,6 +103,19 @@ monthly_avg <- event_sum %>%
 # save to CSV
 # ------------------------------------------------------------------------------
 dest <- paste0("../../data_sets/EDITO_dasid_4687_", MY_REGION, "_PH2_copepod_abundance.csv")
-write.csv(wide_df, dest, row.names = FALSE)
-print("Finished ETL: wide-format CSV ready for PH2 analysis")
 
+monthly_avg_formatted <- monthly_avg %>%
+  mutate(
+    values = format(values, decimal.mark = ",", scientific = FALSE)
+  )
+
+write.table(
+  monthly_avg_formatted,
+  file = dest,
+  sep = ";",
+  row.names = FALSE,
+  col.names = TRUE,
+  quote = FALSE
+)
+
+print("Finished ETL: wide-format CSV ready for PH2 analysis (semicolon + comma decimal)")
