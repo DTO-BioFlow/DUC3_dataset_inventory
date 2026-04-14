@@ -13,7 +13,7 @@
     {
     "id": "PLET_DOME_01",
     "name": "PLET DOME export v1",
-    "description": "Export of PLET - plakton lifeform extraction tool (https://www.dassh.ac.uk/plet-dome/) using harvest PLET package (https://harvest-plet.readthedocs.io/en/latest/). The harvest took place on 2026-01-23",
+    "description": "Export of PLET DOME - plakton lifeform extraction tool (https://www.dassh.ac.uk/plet-dome/) using harvest PLET package (https://harvest-plet.readthedocs.io/en/latest/).",
     "creation_date": "2026-04-14",
     "sources": {
       "data_store": "https://minio.dive.edito.eu/oidc-willemboone/PLET/assessment_data_PLET_DOME.parquet",
