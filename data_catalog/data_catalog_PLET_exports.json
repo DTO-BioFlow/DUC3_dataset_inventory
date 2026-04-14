@@ -17,7 +17,7 @@
     "creation_date": "2026-04-14",
     "sources": {
       "data_store": "https://minio.dive.edito.eu/oidc-willemboone/PLET/assessment_data_PLET_DOME.parquet",
-      "flow": "https://github.com/DTO-BioFlow/DUC3_dataset_inventory/blob/main/data_flows/1.0_harvest_plet_dome/harvest_2026_04_13.py",
+      "flow": "https://github.com/DTO-BioFlow/DUC3_dataset_inventory/blob/main/data_flows/1.PLET_harvest/harvest_2026_04_13.py",
       "source_link": "https://www.dassh.ac.uk/plet-dome/"
     }
   }
