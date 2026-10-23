@@ -5,7 +5,7 @@
     "description": "Export of PLET - plakton lifeform extraction tool (https://www.dassh.ac.uk/lifeforms/) using harvest PLET package (https://harvest-plet.readthedocs.io/en/latest/).",
     "creation_date": "2026-01-23",
     "sources": {
-      "data_store": "https://minio.dive.edito.eu/oidc-project-dto-bioflow/DUC3/PLET/assessment_data.parquet",
+      "data_store": "https://minio.dive.edito.eu/project-dto-bioflow/DUC3/PLET/assessment_data.parquet",
       "flow": "https://github.com/DTO-BioFlow/DUC3_harvest_plet_demo/blob/main/example_harvest_for_assessment/assessment_ETL.py",
       "source_link": "https://www.dassh.ac.uk/lifeforms/"
     }
