@@ -24,5 +24,32 @@
       "flow": "https://github.com/DTO-BioFlow/DUC3_dataset_inventory/blob/main/data_flows/0.EDITO_dasid_4687/get_edito_dasid_4687_SNS_PH1_holo_mero.R",
       "source_link": "https://www.vliz.be/en/imis?module=dataset&dasid=4687"
     }
+  },
+  {
+    "id": "DYPHYRAD_2019_2025_PH1_diatom_dinoflagellate",
+    "name": "DYPHYRAD 2019–2025 diatom and dinoflagellate pooled data",
+    "description": "Monthly mean abundances of diatiom and dinoflagellate plankton from FlowCam 10X observations collected during the DYPHYRAD monitoring from 2019 to 2025",
+    "creation_date": "2026-10-30",
+    "lifeforms": ["diatom", "dinoflagellate"],
+    "region": "CCTI",
+    "sources": {
+      "data_store": "https://raw.githubusercontent.com/DTO-BioFlow/DUC3_dataset_inventory/refs/heads/main/data_sets/DYPHYRAD_2019_2025_PH1_diatom_dinoflagellate_pooled.csv",
+      "flow": "NA",
+      "source_link": "TBD"
+    }
+  },
+    {
+    "id": " DYPHYRAD_2019_2025_PH1_HAB_nonHAB",
+    "name": "DYPHYRAD 2019–2025 HAB and non-HAB pooled data",
+    "description": "Monthly mean abundances of HAB and nonHAB plankton from FlowCam 10X observations collected during the DYPHYRAD monitoring from 2019 to 2025",
+    "creation_date": "2026-10-30",
+    "lifeforms": ["HAB", "nonHAB"],
+    "region": "CCTI",
+    "sources": {
+      "data_store": "https://raw.githubusercontent.com/DTO-BioFlow/DUC3_dataset_inventory/refs/heads/main/data_sets/DYPHYRAD_2019_2025_PH1_HAB_nonHAB_pooled.csv",
+      "flow": "NA",
+      "source_link": "TBD"
+    }
   }
+
 ]
