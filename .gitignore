@@ -15,6 +15,5 @@ __pycache__
 *.toml
 */.cache
 */logs
-*.csv
 *.env
 
